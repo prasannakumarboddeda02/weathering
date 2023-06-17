@@ -223,7 +223,7 @@ class MainActivity : ComponentActivity() {
         val weatherApi = RetrofitInstance.getInstance().create(WeatherApi::class.java)
         var response1: Response<ResultData>
         runBlocking {
-            response1 = weatherApi.weatherApi(city = text, key = "8cf7d9c8797866cb1d34d33db50d2bae")
+            response1 = weatherApi.weatherApi(city = text, key = key)
             Log.d("pk : ", response1.body().toString())
         }
         return response1
